@@ -7,6 +7,8 @@
 	--mainOrange: #FFA500;
 	--mainGrey: #f9f9f9;
 	--mainBlue: #0059b3;
+	--mainGreen: #a7d366;
+	--mainRed: #FF5733;
 }
 
 html, body {
@@ -129,7 +131,7 @@ html, body {
 	cursor: pointer;
 }
 
-/*Main div*/
+/*First Div*/
 
 #grid_container {
 	width: 95%;
@@ -141,18 +143,16 @@ html, body {
 }
 
 .first_content {
+	border-radius: 4px;
 }
 
-#grid_container div:nth-child(1) {
+#grid_container > div:nth-child(1) {
 	grid-column: 1/6;
 	grid-row: 1/13;
 	border: 1px solid var(--mainGrey);
-	border-top-right-radius: 4px;
-	border-top-left-radius: 4px;
-
 }
 
-#grid_container div:nth-child(1) > p {
+#grid_container > div:nth-child(1) > p {
 	font-size: .8rem;
 	text-align: center;
 	border-bottom: 1px solid var(--mainGrey);
@@ -160,11 +160,10 @@ html, body {
 	margin-bottom: .5rem;
 }
 
-#grid_container div:nth-child(1) > h4 {
+#grid_container > div:nth-child(1) > h4 {
 	text-align: center;
 	background-color: var(--mainGrey);
 	padding: .6rem;
-	border-bottom: 1px solid var(--mainGrey);
 	margin-top: 0px;
 }
 
@@ -193,7 +192,7 @@ html, body {
 	font-size: .8rem;
 }
 
-#grid_container div:nth-child(2) {
+#grid_container > div:nth-child(2) {
 	grid-column: 7/33;
 	grid-row: 1/13;
 }
@@ -230,7 +229,7 @@ html, body {
 	cursor: pointer;
 }
 
-#grid_container div:nth-child(3) {
+#grid_container > div:nth-child(3) {
 	grid-column: 34/41;
 	grid-row: 1/27;
 	background-color: var(--mainGrey);
@@ -250,44 +249,247 @@ html, body {
 }
 
 
-#grid_container div:nth-child(4) {
+#grid_container > div:nth-child(4) {
 	grid-column: 1/6;
 	grid-row: 14/27;
+	text-align: center;
+}
+
+#grid_container > div:nth-child(4) > h4 {
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	text-align: center;
+	background-color: var(--mainGrey);
+	padding: .6rem;
+	margin: 0px;
+}
+
+#list_of_logoes {
+	padding: 0px;
+	height: 100%;
+}
+
+.logoes_nav {
+	list-style: none;
+	margin-top: .6rem;
+	cursor: pointer;
+	border-bottom: 1px solid var(--mainGrey);
+	padding-bottom: .5rem;
+}
+
+.logoes_nav > img {
+	width: 70%;
+	height: 70%;
+}
+
+#show_all_brands {
+	width: 80%;
+	height: 80%;
+	background-color: var(--mainBlue);
+	color: var(--mainWhite);
+	margin: 0px auto;
+	padding: .3rem;
+	border-radius: 4px;
 }
 
 
-
-#grid_container div:nth-child(5) {
-	grid-column: 1/6;
-	grid-row: 14/27;
-}
-
-#grid_container div:nth-child(6) {
+#grid_container > div:nth-child(5) {
 	grid-column: 7/15;
 	grid-row: 14/20;
 }
 
-#grid_container div:nth-child(7) {
+#grid_container > div:nth-child(6) {
 	grid-column: 16/24;
 	grid-row: 14/20;
 }
 
-#grid_container div:nth-child(8) {
+#grid_container > div:nth-child(7) {
 	grid-column: 25/33;
 	grid-row: 14/20;
 }
 
-#grid_container div:nth-child(9) {
+#grid_container > div:nth-child(8) {
 	grid-column: 7/15;
 	grid-row: 21/27;
 }
 
-#grid_container div:nth-child(10) {
+#grid_container > div:nth-child(9) {
 	grid-column: 16/24;
 	grid-row: 21/27;
 }
 
-#grid_container div:nth-child(11) {
+#grid_container > div:nth-child(10) {
 	grid-column: 25/33;
 	grid-row: 21/27;
+}
+
+.header_menu {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.instruments_options {
+	text-align: left;
+	padding: 0px;
+	height: 100%;
+	margin-left: .2rem;
+}
+
+.instruments_options > p:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.instruments_options > h2 {
+	margin: .5rem;
+	margin-left: 0px;
+}
+
+.instruments_options > h2:hover {
+	text-decoration: underline;
+	cursor: pointer;	
+}
+
+.instruments_options > p {
+	margin: .2rem;
+	text-overflow
+	white-space: nowrap;
+}
+
+.header_menu img {
+	float: right;
+	margin-right: 2rem;
+}
+
+#guitars {
+	width: 4rem;
+	height: 10rem;
+}
+
+#drums {
+	width: 8.5rem;
+	height: 10rem;
+	margin: 0px;
+}
+
+#piano {
+	width: 8.5rem;
+	height: 10rem;
+	margin-right: -1rem;
+	z-index: -100;
+}
+
+#violine {
+	width: 4.5rem;
+	height: 9.8rem;
+}
+
+#headset {
+	width: 5.5rem;
+	height: 7rem;
+	margin-top: 2.5rem;
+	margin-right: .1rem;
+}
+
+#speaker {
+	width: 9rem;
+	height: 7rem;
+	margin-top: 2rem;
+	margin-right: -1rem;
+}
+
+/*Second Div*/
+
+#second_title {
+	color: var(--mainBlack);
+	text-align: center;
+	margin-top: 2rem;
+}
+
+#second_div {
+	width: 98%;
+	margin: 2rem auto;
+	height: 60rem;
+	grid-gap: .5rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.second_div_cards {
+	border: 1px solid black;
+	border-radius: 4px;
+	display: grid;
+	grid-template-rows: 60% 40%;
+	text-align: center;
+	height: 25rem;
+}
+
+.onSale {
+	float: left;
+	display: inline;
+	background-color: var(--mainOrange);
+	color: var(--mainWhite);
+	padding: .2rem;
+	margin: .5rem;
+	margin-top: .7rem;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.best_sell_stock {
+	float: left;
+	color: var(--mainGreen);
+	margin: 1rem;
+	margin-top: 1.5rem;
+}
+
+.best_sell_price {
+	float: right;
+	color: var(--mainRed);
+	margin: 1rem;
+	margin-top: 1.5rem;
+	font-weight: bold;
+}
+
+#best_sell_drums {
+	width: 88%;
+	height: 75%;
+	cursor: pointer;
+}
+
+#best_sell_tellecaster {
+	height: 90%;
+	width: 90%;
+	cursor: pointer;
+}
+
+#best_sell_microphone {
+	width: 30%;
+	height: 70%;
+	cursor: pointer;
+	margin-top: 3rem;
+	margin-right: 3rem;
+}
+
+#best_sell_piano {
+	width: 90%;
+	height: 90%;
+	cursor: pointer;
+	margin-top: 1.5rem;
+}
+
+#best_sell_bass {
+	width: 90%;
+	height: 90%;
+	cursor: pointer;
+	margin-top: -2rem;
+}
+
+#best_sell_headphones {
+	width: 75%;
+	height: 80%;
+	cursor: pointer;
+	margin-top: 1rem;
+	margin-right: 1rem;
 }
