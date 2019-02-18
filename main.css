@@ -259,7 +259,13 @@ html, body {
 	font-size: 5rem;
 	display: block;
 	white-space: nowrap;
+	opacity: .8;
 }
+
+#clearance_deals_banner:hover {
+	opacity: 1;
+}
+
 
 
 #grid_container > div:nth-child(4) {
@@ -288,6 +294,11 @@ html, body {
 	cursor: pointer;
 	border-bottom: 1px solid var(--mainGrey);
 	padding-bottom: .5rem;
+	opacity: .8;
+}
+
+.logoes_nav:hover {
+	opacity: 1;
 }
 
 .logoes_nav > img {
@@ -435,6 +446,13 @@ html, body {
 	grid-template-rows: 60% 40%;
 	text-align: center;
 	height: 25rem;
+	cursor: pointer;
+	opacity: .9;
+}
+
+.second_div_cards:hover {
+	opacity: 1;
+	border: 2px solid var(--mainOrange);
 }
 
 .onSale {
@@ -463,13 +481,13 @@ html, body {
 	margin: 1rem;
 	margin-top: 1.5rem;
 	font-weight: bold;
+
 }
 
 .best_sell_img {
 	width: 80%;
 	height: 80%;
 	margin-right: 1rem;
-	margin-top:  1.5rem;
 }
 
 /*Third Div*/
@@ -524,7 +542,12 @@ footer {
 	width: 4rem;
 	height: 4rem;
 	cursor: pointer;
+	opacity: .8;
 }
+
+#paying_opt img:hover {
+	opacity: 1;
+} 
 
 #footerText {
 	width: 100%;

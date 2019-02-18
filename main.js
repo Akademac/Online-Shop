@@ -53,6 +53,7 @@ window.addEventListener('load', () => {
 		best_sell_cards.forEach(card => {
 
 				text = `<div>
+						<div class='onSale'>Sale</div>
 						<img src="${data[numberOfCards].img}" class='best_sell_img' alt='Not Found' />
 					</div>
 					<div>
