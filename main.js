@@ -1,4 +1,7 @@
 window.addEventListener('load', () => {
+
+//About us small video
+
 	let about_us_video = document.querySelector('#about_us_video');
 	let play_about_us_video = document.querySelector('.fa-play-circle');
 
@@ -10,6 +13,8 @@ window.addEventListener('load', () => {
 	about_us_video.onended = function() {
 		play_about_us_video.style.display = 'block';
 	};
+
+//Main Nav Div	
 
 	let nav_options = document.querySelectorAll('.nav_options');
 
@@ -30,5 +35,39 @@ window.addEventListener('load', () => {
 	nav_options_div.addEventListener('mouseout', () => {
 		nav_options_div.style.display = 'none';
 		});
+
+//Best sell
+
+	let best_sell_cards = document.querySelectorAll('.second_div_cards');
+
+	let numberOfCards = 0;
+
+	let text = '';
+
+	fetch('https://akademac.github.io/testJSON_2/testJson_2.json')
+	.then(response => {
+		return response.json();
+	})
+	.then(data => {
+
+		best_sell_cards.forEach(card => {
+
+				text = `<div>
+						<img src="${data[numberOfCards].img}" class='best_sell_img' alt='Not Found' />
+					</div>
+					<div>
+						<h4>${data[numberOfCards].name}</h4>
+						<p>${data[numberOfCards].description}</p>
+						<span class='best_sell_stock'>${data[numberOfCards].stock} in stock</span>
+						<span class='best_sell_price'>$${data[numberOfCards].price}</span>
+					</div>`;
+
+
+			card.innerHTML += text;
+			numberOfCards++;
+
+
+		});
+	})
 
 });
