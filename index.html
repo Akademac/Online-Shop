@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' id="html_tag">
 	<head>
 		<title>MusicAsLife</title>
 		<meta charset='UTF-8' />
@@ -80,11 +80,13 @@
 				</div>
 			</div>
 			<div class='first_content'>
-				<img src="Images/banner_1.jpg" id='main_banner' alt='Not found' />
+				<div id='banner_container'>
+					<img src="Images/banner_1.jpg" id='main_banner' alt='Not found' />
+				</div>
 				<div id='banner_buttons'>
-					<span class='banner_buttons'>check inventory</span>
-					<span class='banner_buttons'> lighting and event</span>
-					<span class='banner_buttons'>stratocaster</span>
+					<span class='banner_buttons' data-img='1' id='banner_inventory' >check inventory</span>
+					<span class='banner_buttons' data-img='2' id='banner_lighting' > lighting and event</span>
+					<span class='banner_buttons' data-img='3' id='banner_stratocaster' >stratocaster</span>
 				</div>
 			</div>
 			<div class='first_content'>
